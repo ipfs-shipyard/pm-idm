@@ -2,8 +2,8 @@
 name: User Story
 about: An issue describing an agile user story
 title: As a user I want to <placeholder>
-labels: ''
-assignees: ''
+labels: user-story
+assignees: andreforsousa, paulobmarcos, PedroMiguelSS, satazor
 
 ---
 

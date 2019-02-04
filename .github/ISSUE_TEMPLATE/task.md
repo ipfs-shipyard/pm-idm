@@ -2,7 +2,7 @@
 name: Task
 about: An issue describing an agile task
 title: ''
-labels: ''
+labels: task
 assignees: ''
 
 ---
