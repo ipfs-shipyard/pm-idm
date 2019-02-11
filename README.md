@@ -43,17 +43,17 @@ You are also welcome to join us in our sprint progress call, as detailed in [Mil
 
 The codebase lives in separate GitHub repositories:
 
-- [js-ipid](https://github.com/ipfs-shipyard/js-ipid) - Module to create and manage DID Documents using the IPID spec.
-- [js-idm-wallet](https://github.com/ipfs-shipyard/js-idm-wallet) - IDM Wallet SDK to be used by JS based wallet applications.
-- [js-idm-client](https://github.com/ipfs-shipyard/js-idm-client) - IDM Client SDK to be used by JS applications that interact with IDM Wallets.
-- [idm-web](https://github.com/ipfs-shipyard/idm-web) - IDM Wallet Web GUI.
-- [idm-web-uikit](https://github.com/ipfs-shipyard/idm-web-uikit) - React shared components used by idm-web.
+- [`js-ipid`](https://github.com/ipfs-shipyard/js-ipid) - Module to create and manage DID Documents using the IPID spec.
+- [`js-idm-wallet`](https://github.com/ipfs-shipyard/js-idm-wallet) - IDM Wallet SDK to be used by JS based wallet applications.
+- [`js-idm-client`](https://github.com/ipfs-shipyard/js-idm-client) - IDM Client SDK to be used by JS applications that interact with IDM Wallets.
+- [`idm-web`](https://github.com/ipfs-shipyard/idm-web) - IDM Wallet Web GUI.
+- [`idm-web-uikit`](https://github.com/ipfs-shipyard/idm-web-uikit) - React shared components used by `idm-web`.
 
 We will update this list whenever new IDM based repositories are created.
 
 ## References
 
-- [DID](https://w3c-ccg.github.io/did-spec/)
+- [DIDs](https://w3c-ccg.github.io/did-spec/)
 - [IPID](https://github.com/jonnycrunch/ipid)
 - [Verifiable Credentials](https://w3c.github.io/vc-data-model/)
 - [DID Auth](https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/final-documents/did-auth.pdf)
