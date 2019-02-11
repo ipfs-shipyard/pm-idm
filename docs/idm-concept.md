@@ -203,4 +203,4 @@ Moreover, the IDM Client has a discovery mechanism that finds the most appropria
 
 Messages are exchanged from the IDM Client to the IDM Wallet and vice-versa through the IDM Bridge. Those messages will be defined as part of the [IDM Bridge spec](./spec/idm-spec#idm-bridge) to ensure the interoperability between different implementations.
 
-There will be a reference IDM Bridge written in JavaScript that will solve scenario `1` by leveraging the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to create a communication channel between IDM Clients and a IDM Wallet running on a pre-defined domain. Later on, that bridge may also use the [Broadcast Channel API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) to support wallets running in different domains.
+There will be a reference IDM Bridge written in JavaScript that will solve scenario `1` by leveraging the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to create a communication channel between IDM Clients and a IDM Wallet running on a pre-defined domain.
