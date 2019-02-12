@@ -1,4 +1,4 @@
-# IDM Concept
+# Identity Manager Concept
 
 - [Introduction](#introduction)
 - [Research: standards & foundations](#research-standards--foundations)
@@ -76,7 +76,7 @@ From a higher-level perspective, the Identity Manager - or IDM for short - is co
 
 The IDM Wallet is similar to the physical wallet you carry everyday. It contains all the digital identities of its holder and all the information attached to them in a secure and encrypted way.
 
-Note that the IDM Wallet is an headless component, meaning it has no graphical user interface. Anyone wanting to build such GUIs, may choose from a variety of SDKs written in different programming languages, all based on the [IDM Wallet spec](./spec/idm-spec#idm-wallet). More information about the IDM Wallet UI can be found later on this document.
+Note that the IDM Wallet is an headless component, meaning it has no graphical user interface. Anyone wanting to build such GUIs, may choose from a variety of SDKs written in different programming languages, all based on the [IDM Wallet spec](idm-spec.md#idm-wallet). More information about the IDM Wallet UI can be found later on this document.
 
 There will be a reference IDM Wallet written in JavaScript, suitable to use inside a browser.
 
@@ -180,7 +180,7 @@ The goal of the reference UI is to have a really polished interface with a premi
 
 ### IDM Client
 
-Applications need to interact with the IDM Wallet. This process will be facilitated by the IDM Client, which will be available as multiple SDKs for different programming languages. Each SDK will provide a simple and intuitive interface based on the [IDM Client Spec](./spec/idm-spec#idm-client) and contain means to authenticate, unauthenticate, sign, verify signatures, amongst others.
+Applications need to interact with the IDM Wallet. This process will be facilitated by the IDM Client, which will be available as multiple SDKs for different programming languages. Each SDK will provide a simple and intuitive interface based on the [IDM Client Spec](idm-spec.md#idm-client) and contain means to authenticate, unauthenticate, sign, verify signatures, amongst others.
 
 There will be a reference IDM Client written in JavaScript, suitable to use inside a browser.
 
@@ -201,6 +201,6 @@ Conceptually, the IDM Bridge is composed by two parts: the provider-side and the
 
 Moreover, the IDM Client has a discovery mechanism that finds the most appropriate IDM Wallet to talk to, starting by locating one closer to its own context that also supports one of its transports. For reference, there are various degrees of closeness, from closest to the furthest: exactly the same context (e.g.: within same browser), same machine, same network or different network. The discovery is likely to be more transparent and automatic if both sides are close to each other. For example, in scenario `2`, the IDM Client can try to initiate a WebSocket connection to `localhost:<predefined-port>` to check if there's a IDM Wallet running there. On the contrary, the further both sides are, the less automatic the process is and might require users to mediate the process by scanning QR-codes, inputting numbers, or other mechanisms.
 
-Messages are exchanged from the IDM Client to the IDM Wallet and vice-versa through the IDM Bridge. Those messages will be defined as part of the [IDM Bridge spec](./spec/idm-spec#idm-bridge) to ensure the interoperability between different implementations.
+Messages are exchanged from the IDM Client to the IDM Wallet and vice-versa through the IDM Bridge. Those messages will be defined as part of the [IDM Bridge spec](idm-spec.md#idm-bridge) to ensure the interoperability between different implementations.
 
 There will be a reference IDM Bridge written in JavaScript with the goal to solve scenario `1` by leveraging the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to create a communication channel between IDM Clients and a IDM Wallet running on a pre-defined domain.
