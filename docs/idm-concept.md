@@ -46,7 +46,7 @@ Because the ecosystem is still in its infancy and there's a lack of trusted issu
 
 DID-Auth is an handshake ceremony where an entity proves control over an identity to a relying party.
 
-In an authentication scenario between a user and an application, the application may want to ensure that the entity is in control of the DID it presented. Similarly, the user being authenticated may also check if the application's DID is in the application's control. Another typical scenario is when an entity requests access to some private data and the holder of the data needs check if that entity is in control of the identity's DID before handing the key to decrypt that data. In both scenarios, verifiable credentials may be exchanged so that the credibility of those identities may be evaluated during the handshake.
+In an authentication scenario between an user and an application, the application may want to ensure that the entity is in control of the DID it presented. Similarly, the user being authenticated may also check if the application's DID is in the application's control. Another typical scenario is when an entity requests access to some private data and the holder of the data needs check if that entity is in control of the identity's DID before handing the key to decrypt that data. In both scenarios, verifiable credentials may be exchanged so that the credibility of those identities may be evaluated during the handshake.
 
 ## IDM - Identity Manager
 
@@ -55,7 +55,7 @@ In an authentication scenario between a user and an application, the application
 While DID's, Verifiable Credentials and DID-Auth provide interoperable models for common use-cases, the reality is that current identity wallets are closed in their own DID-method ecosystems.
 
 On one hand, applications wanting to embrace identities using different DID-methods have to integrate with different identity wallets, such as `uPort` and `blockstack`. These wallets have SDKs with different APIs, increasing integration complexity and crippling adoption.
-On the other hand, users are asked to authenticate using specific DID-methods because the application they are interacting with is limited by the DID-methods they support. Moreover, and often as a consequence, users are required to use multiple wallets to manage different identities they own. As an example, a user that owns its persona's DID and its company's DID must use different wallets in case they were created using different DID-methods.
+On the other hand, users are asked to authenticate using specific DID-methods because the application they are interacting with is limited by the DID-methods they support. Moreover, and often as a consequence, users are required to use multiple wallets to manage different identities they own. As an example, an user that owns its persona's DID and its company's DID must use different wallets in case they were created using different DID-methods.
 
 The Identity Manager is a unified identity wallet that aims to support multiple DIDs and multiple DID-methods, where:
 
@@ -193,7 +193,7 @@ While applications use the IDM Client to interact with an IDM Wallet, the way th
 2. An Application running on a browser and an IDM Wallet running as a native OS application, on the same equipment
 	- Solution: The IDM Wallet exposes a local [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) server on a pre-defined port known by the IDM Client
 3. Both the Application and IDM Wallet are native OS applications, running on the same equipment
-	- Solution: Use OS specific inter-process communication mechanisms, such as [Distributed Objects](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DistrObjects/Concepts/AboutDistributedObjects.html) for MacOSx and [MIDL](https://docs.microsoft.com/en-us/windows/desktop/midl/midl-start-page) for Windows
+	- Solution: Use inter-process communication, preferring mechanisms offered by the OS
 4. An Application running on a laptop and an IDM Wallet running on a smartphone
     - Solution: Use IPFS's pubsub to find and talk to each other
 
@@ -203,4 +203,4 @@ Moreover, the IDM Client has a discovery mechanism that finds the most appropria
 
 Messages are exchanged from the IDM Client to the IDM Wallet and vice-versa through the IDM Bridge. Those messages will be defined as part of the [IDM Bridge spec](./spec/idm-spec#idm-bridge) to ensure the interoperability between different implementations.
 
-There will be a reference IDM Bridge written in JavaScript that will solve scenario `1` by leveraging the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to create a communication channel between IDM Clients and a IDM Wallet running on a pre-defined domain.
+There will be a reference IDM Bridge written in JavaScript with the goal to solve scenario `1` by leveraging the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to create a communication channel between IDM Clients and a IDM Wallet running on a pre-defined domain.
