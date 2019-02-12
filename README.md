@@ -32,12 +32,12 @@ We create an issue with the label [`progress-call`](https://github.com/ipfs-ship
 
 All work is organised on GitHub throughout this repository. There is also a [Project Board](https://github.com/ipfs-shipyard/pm-idm/projects/1) that we use for organisation, prioritisation and sprint planning.
 
-To manage our project, we adopted the Scrum methodology with two-week sprints. 
+To manage our project, we adopted the Scrum methodology with two-week sprints.
 Every sprint begins on a monday with the sprint planning meeting. Additionally, on the second monday of each sprint, there is a backlog grooming session. At the end of each sprint, we do a sprint review and a sprint retrospective to analyse what can be improved and what we commit to do better in the next one.
 
-The best way to contribute would be to open a [GitHub Issue](https://github.com/ipfs-shipyard/pm-idm/issues) and, if you are willing to, open a [Pull Request](https://github.com/ipfs-shipyard/pm-idm/pulls) while targeting the respective issue. _Also please take in consideration that every commit should be following [Conventional Commits](https://conventionalcommits.org/) guidelines._
+The best way to contribute would be to open a [GitHub Issue](https://github.com/ipfs-shipyard/pm-idm/issues) and, if you are willing to, open a [Pull Request](https://github.com/ipfs-shipyard/pm-idm/pulls) while targeting the respective issue. Also please take in consideration that every commit should be following [Conventional Commits](https://conventionalcommits.org/) guidelines.
 
-You are also welcome to join us in our sprint progress call, as detailed in [Milestones & Progress](#milestones--progress). 
+You are also welcome to join us in our sprint progress call, as detailed in [Milestones & Progress](#milestones--progress).
 
 ### Codebase
 
