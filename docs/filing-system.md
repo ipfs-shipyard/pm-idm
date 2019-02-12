@@ -1,3 +1,5 @@
+# Filing System
+
 In order to keep the project organised, and so that everyone understands where and how to find the material, here's a detailed description of the folder structure to support the filing system.
 
 ## Folder structure
