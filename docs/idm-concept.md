@@ -105,7 +105,7 @@ Most applications need to know the identity of the user so that they can provide
 
 Applications may start an authentication process, issuing an authentication request to an IDM Wallet, containing the application DID and Verifiable Credentials with its details, such as the application name, and the credentials it wants to receive from an identity. The IDM Wallet will perform DID-Auth to ensure that the application is in control of the DID it presented. If successful, the user is then prompted to select an identity and to accept what the application is asking for.
 
-If the user accepted the prompt, a new session is created and will be used for any further interactions between that application and that IDM Wallet. The session is composed of a key-pair where the public key is known by both, serving as the session identifier, while the private key is only known by that IDM Wallet. Additionally, all sessions have a max-age, meaning they expire as time passes.
+If the user accepted the prompt, a new session is created and will be used for any further interactions between that application and that IDM Wallet. The session is composed of a key-pair where the public key is known by both, serving as the session identifier, while the private key is only known by that IDM Wallet. Moreover, the Session Public Key was signed with the Device Private Key, serving as an authorization proof. Worth noting that all sessions have a max-age, meaning they expire as time passes.
 
 #### Signing artifacts on applications
 
