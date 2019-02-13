@@ -10,7 +10,7 @@ The folder structure is divided in several layers. Here's the layer breakdown:
 
 All new clients should get their own folders, even if they are related to the projects you’ve been working on earlier.
 
-**2. Project folders** (inside a client)
+**2. Project folders**
 
 Before you begin working on anything new, create a project folder with a meaningful name. `poster` is okay, but `halloween-poster-2018` is better, as you never know how many posters there will be down the road.
 
@@ -18,7 +18,7 @@ So what if you finish that project and the client returns months later asking fo
 
 Folders roughly represent different development stages:
 
-- `1_input`: Everything you use as input for the project, like client briefing, inspiration, community feedback, raw footage and photography, templates that you buy, and other notes. This can contain files, documents, notes, etc.
+- `1_input`: Everything you use as input for the project, like briefing, inspiration, community feedback, raw footage and photography, templates that you buy, and other notes. This can contain files, documents, notes, etc.
 - `2_work`: Where you keep the actual design or source files, the stuff you work on. Typically, it should contain nothing else but a list of files with the designs in various versions or revision stages.
 - `3_output`: All final files for delivery to the next stage, should it be the development and marketing team, client, or other. For print projects, this is where you place your prepress files which can be sent to the printer, like PDF’s, fonts and so on. For web projects, this is where you put the mockups with specs, or actual HTML version of the site, if you do the coding too.
 
@@ -145,18 +145,7 @@ Here's a simplified, hypothetical organisation:
     		- some-other-project
     			- ...
 
-## Storage
-
-In order to improve collaboration between the team, a *Network Attached Storage* (NAS) device is used, which acts as a shared network folder, in which all the work is stored.
-
-Upon adding the NAS shared folder, you will find a `design` folder, which acts as the root folder of the structure described in the example above.
-
-## Backup
-
-In order to avoid loss of data, this NAS is automatically backed up periodically.
-
 ## Acknowledgements
 
 This document is based on [How to keep your design files neat and tidy](http://99designs.com/designer-blog/2013/02/06/how-to-keep-your-design-files-neat-and-tidy/).
-
 Contributors to this process were MOXY, Protocol Labs and BABOOM.
