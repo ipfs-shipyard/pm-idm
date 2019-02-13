@@ -41,7 +41,7 @@ You are also welcome to join us in our sprint progress call, as detailed in [Mil
 
 ### Design
 
-If you'd like an overview of the project folder structure, have a look at the [Filing System](https://github.com/ipfs-shipyard/pm-IDM/blob/master/docs/filing-system.md).
+If you'd like an overview of the project folder structure, have a look at the [Filing System](docs/filing-system.md).
 
 
 ### Codebase
