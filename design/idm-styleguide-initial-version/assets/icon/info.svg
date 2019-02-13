@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>icon/info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atomic-Design---Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms_01" transform="translate(-640.000000, -5255.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1680" height="6890"></rect>
+            <g id="input-password" transform="translate(160.000000, 4993.000000)" fill-rule="nonzero">
+                <g id="input/password/weak" transform="translate(0.000000, 191.000000)">
+                    <g id="icon/info" transform="translate(480.000000, 71.000000)">
+                        <rect id="icon/info-bg" x="0" y="0" width="20" height="20"></rect>
+                        <path d="M14.2423095,5.75702811 C11.899067,3.41415152 8.10024746,3.41434923 5.75724891,5.75746972 C3.41425036,8.10059021 3.41425036,11.8994098 5.75724891,14.2425303 C8.10024746,16.5856508 11.899067,16.5858485 14.2423095,14.2429719 C15.3687157,13.11825 16.0016659,11.5917884 16.0016659,10 C16.0016659,8.40821159 15.3687157,6.88175004 14.2423095,5.75702811 Z M10.5495384,13.3072289 L9.44913677,13.3072289 L9.44913677,8.937751 L10.5495384,8.937751 L10.5495384,13.3072289 Z M10.5495384,7.97991968 L9.44913677,7.97991968 L9.44913677,6.87751004 L10.5495384,6.87751004 L10.5495384,7.97991968 Z" fill-opacity="0.5" fill="#A5A29E"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

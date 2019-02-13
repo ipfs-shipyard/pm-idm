@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>icon/warning</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atomic-Design---Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Atoms_01" transform="translate(-1338.000000, -4743.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1680" height="6890"></rect>
+            <g id="input/dense-field" transform="translate(858.000000, 4672.000000)">
+                <g id="icon/warning" transform="translate(480.000000, 71.000000)">
+                    <rect id="icon/warning-bg" fill-rule="nonzero" x="0" y="0" width="20" height="20"></rect>
+                    <path d="M15.925,14.2 L10.675,5.125 C10.375,4.6 9.7,4.6 9.4,5.125 L4.15,14.2 C3.85,14.725 4.225,15.325 4.75,15.325 L15.25,15.325 C15.85,15.325 16.15,14.725 15.925,14.2 Z M9.625,7.6 L10.3,7.6 L10.3,11.125 L9.625,11.125 L9.625,7.6 Z M10,13.9 C9.55,13.9 9.325,13.6 9.325,13.225 C9.325,12.775 9.625,12.55 10,12.55 C10.375,12.55 10.675,12.85 10.675,13.225 C10.675,13.675 10.45,13.9 10,13.9 Z" fill="#D0021B"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

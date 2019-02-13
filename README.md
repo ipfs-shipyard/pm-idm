@@ -39,6 +39,11 @@ The best way to contribute would be to open a [GitHub Issue](https://github.com/
 
 You are also welcome to join us in our sprint progress call, as detailed in [Milestones & Progress](#milestones--progress).
 
+### Design
+
+If you'd like an overview of the project folder structure, have a look at the [Filing System](docs/filing-system.md).
+
+
 ### Codebase
 
 The codebase lives in separate GitHub repositories:
