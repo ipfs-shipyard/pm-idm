@@ -24,7 +24,7 @@ Most of the cryptographic identity solutions out there rely on a single key pair
 
 Decentralized Identifiers (DIDs) are a new type of identifier for verifiable, "self-sovereign" digital identity. DIDs are fully under the control of the DID subject, independent from any centralized registry, identity provider, or certificate authority.
 
-A DID always identifies a person, organization or thing. They have a specific syntax: `<scheme>:<method>:<method-identifier>` (e.g. `did:ipid:a1B2c3d4E5`).
+A DID always identifies a person, organization or thing. It has a specific syntax: `<scheme>:<method>:<method-identifier>` (e.g. `did:ipid:a1B2c3d4E5`).
 
 DIDs resolve to DID-Documents — simple documents that describe how to use that specific DID. Each DID-Document contains at least three things: Cryptographic Material, Authentication Suites and Service Endpoints. Cryptographic Material combined with Authentication Suites provide a set of mechanisms to authenticate as the DID subject (e.g. public keys, pseudonymous biometric protocols, etc.). Service Endpoints enable trusted interactions with the DID subject.
 
@@ -32,7 +32,7 @@ In the real world, people may use different devices to interact with others. Eac
 
 #### Granular permissions & authentication
 
-As previously stated, people use different devices in their daily lives. Each of those devices have different security guarantees. As an example, a device in your home is less likely to be lost or stolen when compared to a mobile phone. On the other hand, a mobile phone may have its storage encrypted which is more secure than an unencrypted one. Having that said, the level of permissions should be considered when adding a new device.
+As previously stated, people use different devices in their daily lives. Each of those devices have different security guarantees. As an example, a device in your home is less likely to be lost or stolen when compared to a mobile phone. On the other hand, a mobile phone may have its storage encrypted which is more secure than an unencrypted one. That being said, the level of permissions should be considered when adding a new device.
 
 Moreover, if a device is going to be used for authentication, its public key should be listed in the `authentication` field of the DID-Document. This is necessary for `DID-Auth` or other authentication mechanisms to assert that the device is valid for authentication.
 
@@ -40,7 +40,7 @@ Moreover, if a device is going to be used for authentication, its public key sho
 
 Verifiable Credentials is a format for interoperable, cryptographically-verifiable digital credentials. DIDs begin by being "trustless" in the sense that they don't directly provide meaningful identity attributes. But trust between DID-identified peers can be built up through the exchange of verifiable credentials - credentials about identity attributes that include cryptographic proof. These proofs can be verified by reference to the issuer's DID and DID-Document.
 
-Because the ecosystem is still in its infancy and there's a lack of trusted issuers, identities may self-issue credentials. More specifically, they may issue credentials that define personal attributes about themselves, like their name and birthdate, and credentials that prove they own certain profiles on social networks, similar to how [Keybase](https://keybase.io) does. As of today, many people trust the mainstream social networks, such as Facebook and Twitter, and identities may use them to post cryptographic proofs that link their profiles to a hash of their DID. As time passes by and the ecosystem gets mature, identities will hold credentials issued by others that may be used in a variety of scenarios and purposes.
+Because the ecosystem is still in its infancy and there is a lack of trusted issuers, identities may self-issue credentials. More specifically, they may issue credentials that define personal attributes about themselves, like their name and birthdate, and credentials that prove they own certain profiles on social networks, similar to how [Keybase](https://keybase.io) does. As of today, many people trust the mainstream social networks, such as Facebook and Twitter, and identities may use them to post cryptographic proofs that link their profiles to a hash of their DID. As time passes by and the ecosystem gets mature, identities will hold credentials issued by others that may be used in a variety of scenarios and purposes.
 
 ### Using DID-Auth to prove control of the DID
 
@@ -89,7 +89,7 @@ The IDM Wallet will have a locking mechanism to protect its access. A variety of
 Users will be able to create identities using their preferred DID-method or import existing ones. They will be guided throughout the process in the UI according to the chosen DID-method.
 
 The outcome of the creation of an identity will be a new DID, a Master Key Pair and a Device Key Pair where their correspondent public keys are listed in the DID-Document. The Master Private Key is in complete control of the DID-Document and should be used as little as possible. For that reason, it should be stored outside the IDM Wallet in a secure and recoverable way. One of those ways is via a Paper Key, where the Master Private Key is printed using machine readable representations, such as a QR code. [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing) may also be used to split the Master Private Key into different secrets that can be shared with trustees, like family and close friends. Even if the Paper Key is lost, users may recover their Master Private Key by collecting those secrets from them.
-For the import case, a Device Key Pair will be created and its public key added to the DID-Document as well. Depending on the DID-method, the Master Private Key might be needed to update the DID-Document.
+When importing an identity, a Device Key Pair will be created and its public key added to the DID-Document as well. Depending on the DID-method, the Master Private Key might be needed to update the DID-Document.
 
 Some DID-methods might support granular permissions. This enables users to grant a specific set of permissions to different devices based on how secure the device is and how likely it is to be lost or robbed.
 
@@ -138,7 +138,7 @@ Any party might verify the authenticity and authorship of artifacts signed by ot
 
 #### Managing application sessions
 
-Users will be able to revoke one or all application sessions from within the identity's applications list. After revoking a session, the application will no longer be able to use that session, effectively stopping it from being able to perform operations that require the Session and Device Private Keys.
+Users will be able to revoke one or all application sessions from within the identity's applications list, regardless of whether the application's revoked session is of the device currently being used by the user or not. After revoking a session, the application will no longer be able to use that session, effectively stopping it from being able to perform operations that require the Session and Device Private Keys.
 
 #### Revoking a device
 
@@ -186,7 +186,7 @@ There will be a reference IDM Client written in JavaScript, suitable to use insi
 
 ### IDM Bridge
 
-While applications use the IDM Client to interact with an IDM Wallet, the way they reach each other and communicate is handled by the IDM Bridge. Applications run on a variety of contexts, from within browsers to native applications. An IDM Wallet might coexist in the same context as these applications or, more often, in different contexts and even equipments. Below there's a list of possible scenarios and respective solutions:
+While applications use the IDM Client to interact with an IDM Wallet, the way they reach each other and communicate is handled by the IDM Bridge. Applications run on a variety of contexts, from within browsers to native applications. An IDM Wallet might coexist in the same context as these applications or, more often, in different contexts and even equipments. Below there is a list of possible scenarios and respective solutions:
 
 1. Both an Application and an IDM Wallet running on the same browser, on the same equipment:
 	- Solution: Use an iframe and the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
@@ -199,7 +199,7 @@ While applications use the IDM Client to interact with an IDM Wallet, the way th
 
 Conceptually, the IDM Bridge is composed by two parts: the provider-side and the consumer-side. The provider-side is embedded in the IDM Wallet while the consumer-side is embedded in the IDM Client. Each one of the sides have a set of transports that they support to communicate.
 
-Moreover, the IDM Client has a discovery mechanism that finds the most appropriate IDM Wallet to talk to, starting by locating one closer to its own context that also supports one of its transports. For reference, there are various degrees of closeness, from closest to the furthest: exactly the same context (e.g.: within same browser), same machine, same network or different network. The discovery is likely to be more transparent and automatic if both sides are close to each other. For example, in scenario `2`, the IDM Client can try to initiate a WebSocket connection to `localhost:<predefined-port>` to check if there's a IDM Wallet running there. On the contrary, the further both sides are, the less automatic the process is and might require users to mediate the process by scanning QR-codes, inputting numbers, or other mechanisms.
+Moreover, the IDM Client has a discovery mechanism that finds the most appropriate IDM Wallet to talk to, starting by locating one closer to its own context that also supports one of its transports. For reference, there are various degrees of closeness, from closest to the furthest: exactly the same context (e.g.: within same browser), same machine, same network or different network. The discovery is likely to be more transparent and automatic if both sides are close to each other. For example, in scenario `2`, the IDM Client can try to initiate a WebSocket connection to `localhost:<predefined-port>` to check if there is a IDM Wallet running there. On the contrary, the further both sides are, the less automatic the process is and might require users to mediate the process by scanning QR-codes, inputting numbers, or other mechanisms.
 
 Messages are exchanged from the IDM Client to the IDM Wallet and vice-versa through the IDM Bridge. Those messages will be defined as part of the [IDM Bridge spec](idm-spec.md#idm-bridge) to ensure the interoperability between different implementations.
 
