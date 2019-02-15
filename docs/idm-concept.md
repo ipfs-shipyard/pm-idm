@@ -124,14 +124,14 @@ Ultimately, the application may choose between both methods for different situat
 
 Any party might verify the authenticity and authorship of artifacts signed by others.
 
-- The verification of an artifact signed by the Session Public Key is performed by:
+- The verification of an artifact signed by a Session Private Key is performed by:
     1. Verifying the signature of the artifact against the Session Public Key of the author.
     2. Verifying the signature of the Session Public Key against the Device Public Key of the author. This proves that the Session Public Key was authorized by the Device Private Key.
     3. Verifying if the Device Public Key of the author is present in the DID-Document associated with the DID. This proves that the Device Public Key was authorized by the author's identity.
     4. If Device Public Key is flagged as revoked, compare its revocation effective date with the signature date
 
 
-- The verification of an artifact signed by the Device Public Key is performed by:
+- The verification of an artifact signed by a Device Private Key is performed by:
     1. Verifying the signature of the artifact against the Device Public Key of the author.
     2. Verifying if the Device Public Key of the author is present in the DID-Document associated with the DID. This proves that the Device Public Key was authorized by the Identity (author).
     3. If Device Public Key is flagged as revoked, compare its revocation effective date with the signature date
