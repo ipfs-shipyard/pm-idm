@@ -4,14 +4,6 @@ In order to keep the project organised, and so that everyone understands where a
 
 ## Folder structure
 
-The folder structure is divided in several layers. Here's the layer breakdown:
-
-**1. Client/organisation folders**
-
-All new clients should get their own folders, even if they are related to the projects you’ve been working on earlier.
-
-**2. Project folders**
-
 Before you begin working on anything new, create a project folder with a meaningful name. `poster` is okay, but `halloween-poster-2018` is better, as you never know how many posters there will be down the road.
 
 So what if you finish that project and the client returns months later asking for a revision? You’ll open up a new project folder named `halloween-poster-2019`. That way you’ll easily find the revision later, and keep track of everything your client ordered.
@@ -92,60 +84,54 @@ A few good ideas for folders inside this would be `client` (for client input), `
 Here's a simplified, hypothetical organisation:
 
     - /
-    	- **in-house** `pseudo-client used for in-house projects`
-    		- company-website
-    			- 1_input
-    			- 2_work
-    			- 3_output
-    	- some-client
-    		- some-project
-    			- 1_input
-    				- briefing.md
-    				- community
-    				  - user-survey-20180629.xls
-    				- inspiration
-    				  - awesome-similar-project.jpg
-    			- 2_work
-    				- logo
-    					- logo_1.ai
-    					- logo_2.ai
-    				- backgrounds
-    				- team-pictures
-    				- icons
-    				- experimentation
-    					- poc_1.psd
-    					- poc_2.psd
-    					- poc_3_light.psd
-    					- poc_4_dark.psd
-    					- poc_5.psd
-    				- desktop
-    				  - account
-    					  - ...
-    					  - orders_7.psd
-    					  - details_3.psd
-    				  - artist-profile
-    				  - library
-    				- mobile
-    				  - account
-    				  - artist-profile
-    				  - library
-    			- 3_output
-    				- desktop
-    					- account
-    						- orders_5.png
-    						- orders_6.png
-    						- orders_7.png
-    						- details_3.png
-    					- artist-profile
-    					- library
-    				- mobile
-    					- account
-    					- artist-profile
-    					- library
-    		- some-other-project
-    			- ...
+		- some-project
+			- 1_input
+				- briefing.md
+				- community
+				  - user-survey-20180629.xls
+				- inspiration
+				  - awesome-similar-project.jpg
+			- 2_work
+				- logo
+					- logo_1.ai
+					- logo_2.ai
+				- backgrounds
+				- team-pictures
+				- icons
+				- experimentation
+					- poc_1.psd
+					- poc_2.psd
+					- poc_3_light.psd
+					- poc_4_dark.psd
+					- poc_5.psd
+				- desktop
+				  - account
+					  - ...
+					  - orders_7.psd
+					  - details_3.psd
+				  - artist-profile
+				  - library
+				- mobile
+				  - account
+				  - artist-profile
+				  - library
+			- 3_output
+				- desktop
+					- account
+						- orders_5.png
+						- orders_6.png
+						- orders_7.png
+						- details_3.png
+					- artist-profile
+					- library
+				- mobile
+					- account
+					- artist-profile
+					- library
+		- some-other-project
+			- ...
 
 ## Acknowledgements
 
 This document is based on [How to keep your design files neat and tidy](http://99designs.com/designer-blog/2013/02/06/how-to-keep-your-design-files-neat-and-tidy/).
-Contributors to this process were MOXY, Protocol Labs and BABOOM.
+Contributors to this process were MOXY and Protocol Labs.
