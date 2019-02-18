@@ -6,11 +6,11 @@ The Identity Manager - IDM for short - is a unified digital wallet based on open
 
 Here is a list of some useful documents. If you're interested in collaborating, please check [Contributing](#contributing).
 
-[💡 Concept](docs/idm-concept.md)   
+[💡 IDM Concept](docs/idm-concept.md)   
+[📖 IDM Specification](docs/idm-spec.md)   
 [📐 IDM Information Architecture](docs/images/diagram_information-architecture.png)   
-[🛠 IDM Breakdown](https://docs.google.com/document/d/1g0TjSPjEM4pryPwJTGhIeE4DBsj-VJpz_JqbfllJUgA)  
+[🛠 IDM Breakdown](https://docs.google.com/document/d/1g0TjSPjEM4pryPwJTGhIeE4DBsj-VJpz_JqbfllJUgA)   
 [🗓 IDM Workplan](https://docs.google.com/spreadsheets/d/1Venqgkcao2Lcje0mkCxr9u0H037aC3H5IxMfsoaeMoE)   
-[📖 IDM Specification (WIP)](https://cryptpad.fr/code/#/2/code/view/x6emT-0hXpN4eg-9wZEHaKsmgOEU+jdcyBx9-pG6nQQ)  
 
 ## Team
 
