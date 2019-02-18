@@ -51,7 +51,7 @@ Main scopes:
 .locker.idle.setMaxTime(Number idleTime)
 .locker.idle.getMaxTime(): Number
 .locker.idle.getRemainingTime(): Number
-.locker.idle.reset():
+.locker.idle.reset()
 .locker.locks.list(): Promise<Array<LockerType>>
 .locker.locks.set(LockerType type, Any solutions): Promise
 .locker.locks.drySet(LockerType type, Any solutions): Promise
@@ -61,7 +61,7 @@ Main scopes:
 ### .storage
 
 ```js
-.storage.get(String<String>|String key): Promise<Object<String,Any>>
+.storage.get(Array<String>|String key): Promise<Object<String,Any>>
 .storage.set(Object<String, Any>, { Number maxAge = Infinity, Boolean encrypt = true } ?options): Promise
 .storage.remove(String<String>|String key): Promise
 .storage.clear(): Promise
