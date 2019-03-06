@@ -26,7 +26,7 @@ Here is a list of some useful documents. If you're interested in collaborating, 
 Our milestones are continuously updated and detailed in the [IDM Workplan Document](https://docs.google.com/spreadsheets/d/1Venqgkcao2Lcje0mkCxr9u0H037aC3H5IxMfsoaeMoE). You can also see them in the [Milestiones section](https://github.com/ipfs-shipyard/pm-idm/milestones) of this repository.
 
 On the first monday of every sprint we have a remote call, at 4:00 PM GMT, to report the project's current progress.
-We create an issue with the label [`progress-call`](https://github.com/ipfs-shipyard/pm-idm/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Aprogress-call) for each scheduled call, containing a link to the agenda & notes and with instructions on how to join the video call.
+We create an issue with the label [`progress-call`](https://github.com/ipfs-shipyard/pm-idm/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3Aprogress-call) for each scheduled call, containing a link to the agenda & notes and with instructions on how to join the video call. Moreover, all previous meetings' notes may be found in the [meetings/](meetings) folder.
 
 ## Contributing
 
@@ -37,7 +37,7 @@ Every sprint begins on a monday with the sprint planning meeting. Additionally, 
 
 The best way to contribute would be to open a [GitHub Issue](https://github.com/ipfs-shipyard/pm-idm/issues) and, if you are willing to, open a [Pull Request](https://github.com/ipfs-shipyard/pm-idm/pulls) while targeting the respective issue. Also please take in consideration that every commit should be following [Conventional Commits](https://conventionalcommits.org/) guidelines.
 
-You are also welcome to join us in our sprint progress call, as detailed in [Milestones & Progress](#milestones--progress).
+You may also talk to us on [IRC at #ipfs-identity on freenode](https://webchat.freenode.net/?channels=%23ipfs-identity). Also, you are also welcome to join us in our sprint progress report call, as detailed in [Milestones & Progress](#milestones--progress).
 
 ### Design
 
