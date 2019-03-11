@@ -10,7 +10,6 @@ Index:
 - [IDM Bridge](#idm-bridge)
 - [Data Types](#data-types)
 
-
 ## IDM Client
 
 ```js
@@ -32,38 +31,45 @@ TODO: add didAuth
 Main scopes:
 
 ```js
-.locker
+.lock
 .storage
 .did
 .identities
 .session
 ```
 
+
 ### .locker
 
 ```js
-.locker.unlock(LockerType type, (Any challenge) => Any solution): Promise<PrivateKey>
 .locker.lock()
+.locker.isPristine(): Promise<Boolean>
 .locker.isLocked(): Boolean
-.locker.onLockedChange((Boolean locked) => {}): Function (to remove the listener)
-.locker.secret.getPublicKey(): Promise<PublicKey>
-.locker.secret.getPrivateKey(): Promise<PrivateKey>
-.locker.idle.setMaxTime(Number idleTime)
-.locker.idle.getMaxTime(): Number
-.locker.idle.getRemainingTime(): Number
-.locker.idle.reset()
-.locker.locks.list(): Promise<Array<LockerType>>
-.locker.locks.set(LockerType type, Any solutions): Promise
-.locker.locks.drySet(LockerType type, Any solutions): Promise
-.locker.locks.unset(LockerType type): Promise
+.locker.onLockedChange((Boolean locked, SymmetricKey secret) => {}): Function (to remove the listener)
+.locker.getSecret(): SymmetricKey
+.locker.getIdleTimer().setMaxTime(Number idleTime)
+.locker.getIdleTimer().getMaxTime(): Promise<Number>
+.locker.getIdleTimer().getRemainingTime(): Number
+.locker.getIdleTimer().restart()
+.locker.getIdleTimer().onTimeout(() => {}): Function (to remove the listener)
+.locker.getMasterLock()
+.locker.getLock(LockType type).isMaster(): Boolean
+.locker.getLock(LockType type).isEnabled(): Promise<Boolean>
+.locker.getLock(LockType type).enable(Any ?params): PromiseΩ
+.locker.getLock(LockType type).disable(): Promise
+.locker.getLock(LockType type).update(Any ?newParams, Any ?input): Promise
+.locker.getLock(LockType type).validate(Any ?params): Promise
+.locker.getLock(LockType type).unlock(Any ?input): Promise<SymmetricKey>
 ```
+
 
 ### .storage
 
 ```js
-.storage.get(Array<String>|String key): Promise<Object<String,Any>>
-.storage.set(Object<String, Any>, { Number maxAge = Infinity, Boolean encrypt = true } ?options): Promise
-.storage.remove(String<String>|String key): Promise
+.storage.has(String key): Promise<Boolean>
+.storage.get(String key): Promise<Any>
+.storage.set(String key, Any value, { Boolean encrypt = true } ?options): Promise
+.storage.remove(String key): Promise
 .storage.clear(): Promise
 ```
 
@@ -166,9 +172,10 @@ IdentifiedSignature { String did, String date, ChainedKey chainedKey, Signature 
 IdentifiedSignatureKeyType enum(device, session)
 Identity { String did, IdentityType type, Schema.org details }
 IdentityType enum(person, organization, other)
-LockerType enum(passphrase, fingerprint, faceid)
+LockType enum(passphrase, webauthn, fingerprint, faceid)
 PrivateKey String (multikey?)
 PublicKey String (multikey?)
+SymmetricKey String?
 ReplicationConsistency { incoming: Array<String>, outgoing: Array<String> }
 ReplicationStage enum(inactive, starting, active, stopping)
 ReplicationStatus { ReplicationStage stage, ReplicationConsistency consistency }
