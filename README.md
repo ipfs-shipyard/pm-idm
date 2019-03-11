@@ -37,7 +37,7 @@ Every sprint begins on a monday with the sprint planning meeting. Additionally, 
 
 The best way to contribute would be to open a [GitHub Issue](https://github.com/ipfs-shipyard/pm-idm/issues) and, if you are willing to, open a [Pull Request](https://github.com/ipfs-shipyard/pm-idm/pulls) while targeting the respective issue. Also please take in consideration that every commit should be following [Conventional Commits](https://conventionalcommits.org/) guidelines.
 
-You may also talk to us on [IRC at #ipfs-identity on freenode](https://webchat.freenode.net/?channels=%23ipfs-identity). Also, you are also welcome to join us in our sprint progress report call, as detailed in [Milestones & Progress](#milestones--progress).
+You may reach us on [IRC at #ipfs-identity on freenode](https://webchat.freenode.net/?channels=%23ipfs-identity). Also, you are welcome to join us in our sprint progress report call, as detailed in [Milestones & Progress](#milestones--progress).
 
 ### Design
 
