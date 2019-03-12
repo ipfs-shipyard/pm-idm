@@ -31,7 +31,7 @@ TODO: add didAuth
 Main scopes:
 
 ```js
-.lock
+.locker
 .storage
 .did
 .identities
