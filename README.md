@@ -43,7 +43,6 @@ You may reach us on [IRC at #ipfs-identity on freenode](https://webchat.freenode
 
 If you'd like an overview of the project folder structure, have a look at the [Filing System](docs/filing-system.md).
 
-
 ### Codebase
 
 The codebase lives in separate GitHub repositories:
@@ -51,8 +50,8 @@ The codebase lives in separate GitHub repositories:
 - [`js-ipid`](https://github.com/ipfs-shipyard/js-ipid) - Module to create and manage DID Documents using the IPID spec.
 - [`js-idm-wallet`](https://github.com/ipfs-shipyard/js-idm-wallet) - IDM Wallet SDK to be used by JS based wallet applications.
 - [`js-idm-client`](https://github.com/ipfs-shipyard/js-idm-client) - IDM Client SDK to be used by JS applications that interact with IDM Wallets.
-- [`idm-web`](https://github.com/ipfs-shipyard/idm-web) - IDM Wallet Web GUI.
-- [`idm-web-uikit`](https://github.com/ipfs-shipyard/idm-web-uikit) - React shared components used by `idm-web`.
+- [`nomios-web`](https://github.com/ipfs-shipyard/nomios-web) - Reference IDM Wallet application based on Web technologies.
+- [`nomios-web-uikit`](https://github.com/ipfs-shipyard/nomios-web-uikit) - A set of shared React components used by `nomios-web`.
 
 We will update this list whenever new IDM based repositories are created.
 
