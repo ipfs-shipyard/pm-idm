@@ -164,19 +164,19 @@ Even though anyone can implement its own IDM Wallet UI application, there is a n
 
 User flow diagram:
 
-<img src="https://raw.githubusercontent.com/ipfs-shipyard/pm-idm/master/docs/images/diagram_user-flow.png" alt="" width="1000">
+<img src="images/diagram_user-flow.png" alt="" width="1000">
 
 Information Architecture diagram:
 
-<img src="https://raw.githubusercontent.com/ipfs-shipyard/pm-idm/master/docs/images/diagram_information-architecture.png" alt="" width="1000">
+<img src="images/diagram_information-architecture.png" alt="" width="1000">
 
 #### Reference UI concept
 
-The goal of the reference UI is to have a really polished interface with a premium feel. It must be easy to use, distinct, reliable, accessible and provide a feel of credibility to the users.
+The goal of the reference UI, named Nomios, is to have a really polished interface with a premium feel. It must be easy to use, distinct, reliable, accessible and provide a feel of credibility to the users.
 
-<img src="https://raw.githubusercontent.com/ipfs-shipyard/pm-idm/master/docs/images/ui-concept_setup-locker.png" alt="" width="1000">
-<img src="https://raw.githubusercontent.com/ipfs-shipyard/pm-idm/master/docs/images/ui-concept_homepage.png" alt="" width="1000">
-<img src="https://raw.githubusercontent.com/ipfs-shipyard/pm-idm/master/docs/images/ui-concept_profile-page.png" alt="" width="1000">
+<img src="images/nomios-concept_setup-locker.png" alt="" width="1000">
+<img src="images/nomios-concept_homepage.png" alt="" width="1000">
+<img src="images/nomios-concept_profile-page.png" alt="" width="1000">
 
 ### IDM Client
 
