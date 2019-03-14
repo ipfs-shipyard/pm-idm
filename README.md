@@ -39,9 +39,6 @@ The best way to contribute would be to open a [GitHub Issue](https://github.com/
 
 You may reach us on [IRC at #ipfs-identity on freenode](https://webchat.freenode.net/?channels=%23ipfs-identity). Also, you are welcome to join us in our sprint progress report call, as detailed in [Milestones & Progress](#milestones--progress).
 
-### Design
-
-If you'd like an overview of the project folder structure, have a look at the [Filing System](docs/filing-system.md).
 
 ### Codebase
 
@@ -54,6 +51,14 @@ The codebase lives in separate GitHub repositories:
 - [`nomios-web-uikit`](https://github.com/ipfs-shipyard/nomios-web-uikit) - A set of shared React components used by `nomios-web`.
 
 We will update this list whenever new IDM based repositories are created.
+
+
+### Design
+
+The design files for Nomios - the reference IDM Wallet UI - are available in a public [Google Drive folder](https://drive.google.com/drive/u/1/folders/1eDACNb28V08c57zzLI3Uh8Bc3fo-0T6m).
+
+If you'd like an overview of the project folder structure, have a look at the [Filing System](docs/filing-system.md).
+
 
 ## References
 
