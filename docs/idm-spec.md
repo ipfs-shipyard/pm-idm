@@ -55,7 +55,7 @@ Main scopes:
 .locker.getMasterLock()
 .locker.getLock(LockType type).isMaster(): Boolean
 .locker.getLock(LockType type).isEnabled(): Promise<Boolean>
-.locker.getLock(LockType type).enable(Any ?params): PromiseΩ
+.locker.getLock(LockType type).enable(Any ?params): Promise<Boolean>
 .locker.getLock(LockType type).disable(): Promise
 .locker.getLock(LockType type).update(Any ?newParams, Any ?input): Promise
 .locker.getLock(LockType type).validate(Any ?params): Promise
@@ -77,21 +77,21 @@ Main scopes:
 
 ```js
 .did.resolve(String did): Promise<DidDocument>
-.did.create(String didMethod, Object parameters): Promise<{ String did, KeyPair deviceKeyPair, KeyPair ?masterKeyPair }>
-.did.import(String did, Object parameters): Promise<{ String did, KeyPair deviceKeyPair> }>
-.did.methods.list(): Array<DIDMethodInfo>
-.did.methods.listSupported(DIDMethodPurpose purpose): Array<DIDMethodInfo>
-.did.methods.isSupported(String didMethod, DIDMethodPurpose purpose)
+.did.create(didMethod, operations): Promise<DidDocument>
+.did.update(did, params, operations): Promise<DidDocument>
+.did.isPublicKeyValid(String did, String publicKeyId, { Date atDate } Object ?options): Promise<Boolean>
+.did.getMethods(): Array<DIDMethodInfo>
 ```
 
 ### .identities
 
 ```js
 .identities.list(): Promise<Array<Identity>>
-.identities.add(String did, KeyPair deviceKeyPair, KeyPair ?masterKeyPair): Promise<Identity>
+.identities.create(didMethod, Object parameters): Promise<Identity>
+.identities.import(didMethod, Object parameters): Promise<Identity>
 .identities.get(String did): Identity
-.identities.remove(String did): Promise
-.identities.onChange(() => {})
+.identities.remove(String did, Object parameters): Promise
+.identities.onChange(() => {}): Function (to remove the listener)
 ```
 
 Note: The Identity appearing above is actually an object with function and not a data-type
@@ -163,7 +163,7 @@ Credential (https://github.com/w3c/vc-data-model)
 CredentialScope enum(details, social)
 DIDMethodPurpose enum(resolve, create, import)
 DIDDocument (https://w3c-ccg.github.io/did-spec/#simple-examples)
-DIDMethodInfo { String didMethod, String description, String ?homepageUrl, Array<Icon> ?icons }
+DIDMethodInfo { String didMethod, String description, String ?homepageUrl, Array<Icon> ?icons, usages: enum(create, import, resolve) }
 Device { PublicKey key, String name, DeviceType type }
 DeviceType enum(laptop, desktop, phone, tablet)
 KeyPair { PublicKey publicKey, PrivateKey privateKey }
