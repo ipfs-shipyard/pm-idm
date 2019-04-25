@@ -43,23 +43,23 @@ Main scopes:
 
 ```js
 .locker.lock()
-.locker.isPristine(): Promise<Boolean>
+.locker.isPristine(): Boolean
 .locker.isLocked(): Boolean
 .locker.onLockedChange((Boolean locked, SymmetricKey secret) => {}): Function (to remove the listener)
 .locker.getSecret(): SymmetricKey
-.locker.getIdleTimer().setMaxTime(Number idleTime)
-.locker.getIdleTimer().getMaxTime(): Promise<Number>
-.locker.getIdleTimer().getRemainingTime(): Number
-.locker.getIdleTimer().restart()
-.locker.getIdleTimer().onTimeout(() => {}): Function (to remove the listener)
-.locker.getMasterLock()
+.locker.idleTimer.setMaxTime(Number idleTime): Promise
+.locker.idleTimer.getMaxTime(): Number
+.locker.idleTimer.getRemainingTime(): Number
+.locker.idleTimer.restart()
+.locker.idleTimer.onTimeout(() => {}): Function (to remove the listener)
+.locker.masterLock
 .locker.getLock(LockType type).isMaster(): Boolean
-.locker.getLock(LockType type).isEnabled(): Promise<Boolean>
-.locker.getLock(LockType type).enable(Any ?params): Promise<Boolean>
+.locker.getLock(LockType type).isEnabled(): Boolean
+.locker.getLock(LockType type).enable(Any ?params): Promise
 .locker.getLock(LockType type).disable(): Promise
 .locker.getLock(LockType type).update(Any ?newParams, Any ?input): Promise
 .locker.getLock(LockType type).validate(Any ?params): Promise
-.locker.getLock(LockType type).unlock(Any ?input): Promise<SymmetricKey>
+.locker.getLock(LockType type).unlock(Any ?input): Promise
 ```
 
 
