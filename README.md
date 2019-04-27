@@ -44,7 +44,7 @@ You may reach us on [IRC at #ipfs-identity on freenode](https://webchat.freenode
 
 The codebase lives in separate GitHub repositories:
 
-- [`js-ipid`](https://github.com/ipfs-shipyard/js-ipid) - Module to create and manage DID Documents using the IPID spec.
+- [`js-did-ipid`](https://github.com/ipfs-shipyard/js-did-ipid) - Module to create and manage DID Documents using the IPID spec.
 - [`js-crypto-key-composer`](https://github.com/ipfs-shipyard/js-crypto-key-composer) - Module to decompose and compose crypto keys of different types and formats.
 - [`js-human-crypto-keys`](https://github.com/ipfs-shipyard/js-human-crypto-keys) - Module to generate and import human-friendly cryptographic keys using mnemonics or seeds.
 - [`js-idm-wallet`](https://github.com/ipfs-shipyard/js-idm-wallet) - IDM Wallet SDK to be used by JS based wallet applications.
