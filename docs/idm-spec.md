@@ -45,9 +45,9 @@ Main scopes:
 .locker.lock()
 .locker.isPristine(): Boolean
 .locker.isLocked(): Boolean
-.locker.onLockedChange((Boolean locked, SymmetricKey secret) => {}): Function (to remove the listener)
 .locker.getSecret(): SymmetricKey
-.locker.idleTimer.setMaxTime(Number idleTime): Promise
+.locker.onLockedChange((Boolean locked) => {}): Function (to remove the listener)
+.locker.idleTimer.setMaxTime(Number idleTime)
 .locker.idleTimer.getMaxTime(): Number
 .locker.idleTimer.getRemainingTime(): Number
 .locker.idleTimer.restart()
@@ -55,10 +55,11 @@ Main scopes:
 .locker.masterLock
 .locker.getLock(LockType type).isMaster(): Boolean
 .locker.getLock(LockType type).isEnabled(): Boolean
+.locker.getLock(LockType type).onEnabledChange(() => {}): Function (to remove the listener)
 .locker.getLock(LockType type).enable(Any ?params): Promise
 .locker.getLock(LockType type).disable(): Promise
 .locker.getLock(LockType type).update(Any ?newParams, Any ?input): Promise
-.locker.getLock(LockType type).validate(Any ?params): Promise
+.locker.getLock(LockType type).validate(Any ?params): Promise<Any>
 .locker.getLock(LockType type).unlock(Any ?input): Promise
 ```
 
@@ -71,32 +72,67 @@ Main scopes:
 .storage.set(String key, Any value, { Boolean encrypt = true } ?options): Promise
 .storage.remove(String key): Promise
 .storage.clear(): Promise
+.storage.list({ String ?gte, String ?lte, String ?gt, String ?lt, Boolean keys = true, Boolean values = true } ?options): Promise<Array<Object|String>>
 ```
 
-### .did
+### .didm
 
 ```js
-.did.resolve(String did): Promise<DidDocument>
-.did.create(didMethod, operations): Promise<DidDocument>
-.did.update(did, params, operations): Promise<DidDocument>
-.did.isPublicKeyValid(String did, String publicKeyId, { Date atDate } Object ?options): Promise<Boolean>
-.did.getMethods(): Array<DIDMethodInfo>
+.didm.getDid(String didMethod, Object params): Promise<String>
+.didm.resolve(String did): Promise<DIDDocument>
+.didm.create(didMethod, params, operations): Promise<{ String did, DIDDocument didDocument, BackupData ?backupData }>
+.didm.update(did, params, operations): Promise<DIDDocument>
+.didm.isPublicKeyValid(String did, String publicKeyId, { Date atDate } Object ?options): Promise<Boolean>
+.didm.getMethods(): Array<DIDMethodInfo>
+.didm.isSupported(String didMethod, DIDMethodPurpose purpose): Boolean
 ```
 
 ### .identities
 
 ```js
-.identities.list(): Promise<Array<Identity>>
-.identities.create(didMethod, Object parameters): Promise<Identity>
-.identities.import(didMethod, Object parameters): Promise<Identity>
-.identities.get(String did): Identity
-.identities.remove(String did, Object parameters): Promise
-.identities.onChange(() => {}): Function (to remove the listener)
+.identities.isLoaded(): Boolean
+.identities.load(): Promise<Array<Identity>>
+.identities.list(): Array<Identity>
+.identities.get(String id): Identity
+.identities.create(didMethod, Object params): Promise<Identity>
+.identities.import(didMethod, Object params): Promise<Identity>
+.identities.peek(didMethod, Object params): Promise<{ String did, DIDDocument didDocument, SchemaOrg profileDetails }>
+.identities.remove(String id, Object params): Promise
+.identities.onLoad((Array<Identity> identities) => {}): Function (to remove the listener)
+.identities.onChange((Array<Identity> identities) => {}): Function (to remove the listener)
 ```
 
-Note: The Identity appearing above is actually an object with function and not a data-type
+#### Identity
 
-#### identity
+```js
+identity.getId(): String
+identity.getDid(): String
+identity.getAddedAt(): Number
+identity.isRevoked(): Boolean
+identity.onRevoke(() => {}) : Function (to remove the listener)
+```
+
+##### identity.profile
+
+```js
+identity.profile.getProperty(String key): Any
+identity.profile.setProperty(String key, Any value): Promise
+identity.profile.unsetProperty(String key): Promise
+identity.profile.getDetails(): Promise<SchemaOrg>
+identity.profile.onChange(() => {}) : Function (to remove the listener)
+```
+
+##### identity.devices
+
+```js
+identity.devices.list(): Array<Device>
+identity.devices.get(String id): Device
+identity.devices.getCurrent(): Device
+identity.devices.revoke(String id, Object params): Promise
+identity.devices.updateInfo(id, { String name, DeviceType type } deviceInfo)
+identity.devices.onChange((Array<Device> devices) => {}) : Function (to remove the listener)
+identity.devices.onCurrentRevoke(() => {}) : Function (to remove the listener)
+```
 
 ##### identity.credentials
 
@@ -106,16 +142,6 @@ identity.credentials.listByScope(CredentialScope scope): Array<Credential>
 identity.credentials.add(Credential credential, CredentialScope ?scope)
 identity.credentials.remove(String credentialId)
 identity.credentials.onChange((Array<Credentials> credentials) => {}) : Function (to remove the listener)
-```
-
-##### identity.devices
-
-```js
-identity.devices.list(): Array<Device>
-identity.devices.add(Device device, PrivateKey masterKey)
-identity.devices.revoke(PublicKey deviceKey, PrivateKey masterKey)
-identity.devices.update(PublicKey deviceKey, Device device)
-identity.devices.onChange((Array<Device> devices) => {}) : Function (to remove the listener)
 ```
 
 ##### identity.applications
@@ -156,22 +182,22 @@ TODO
 ## Data Types
 
 ```js
+BackupData { } (depends on the DIDMethod, e.g.: might contain a mnemonic/seed)
 App { String id, String name, String homepageUrl, Array<Icon> ?icons }
 AppUsage { Number interactionsCount, String addedAt, String lastUsedAt }
 ChainedKey { PublicKey key, ChainedKey ?parent, Signature ?proof }
 Credential (https://github.com/w3c/vc-data-model)
 CredentialScope enum(details, social)
-DIDMethodPurpose enum(resolve, create, import)
+DIDMethodPurpose enum(resolve, create, import, getDid, isPublicKeyValid)
 DIDDocument (https://w3c-ccg.github.io/did-spec/#simple-examples)
 DIDMethodInfo { String didMethod, String description, String ?homepageUrl, Array<Icon> ?icons, usages: enum(create, import, resolve) }
-Device { PublicKey key, String name, DeviceType type }
+Device { Number createdAt, Number updatedAt, Number revokedAt, String name, DeviceType type, PublicKey publicKey, KeyType keyType  }
 DeviceType enum(laptop, desktop, phone, tablet)
+KeyType enum(RsaVerificationKey2018, Ed25519VerificationKey2018, EdDsaSASignatureSecp256k1)
 KeyPair { PublicKey publicKey, PrivateKey privateKey }
 Icon { Number width, Number height, String type, String url }
 IdentifiedSignature { String did, String date, ChainedKey chainedKey, Signature proof }
 IdentifiedSignatureKeyType enum(device, session)
-Identity { String did, IdentityType type, Schema.org details }
-IdentityType enum(person, organization, other)
 LockType enum(passphrase, webauthn, fingerprint, faceid)
 PrivateKey String (multikey?)
 PublicKey String (multikey?)
@@ -179,6 +205,6 @@ SymmetricKey String?
 ReplicationConsistency { incoming: Array<String>, outgoing: Array<String> }
 ReplicationStage enum(inactive, starting, active, stopping)
 ReplicationStatus { ReplicationStage stage, ReplicationConsistency consistency }
-Session { String id, String appId, String createdAt, String expiresAt, Identity identity, Object<CredentialScope, Array<Credential>> credentials }
+Session { String id, String appId, String createdAt, String expiresAt, { String did, SchemaOrg details } identity, Object<CredentialScope, Array<Credential>> credentials }
 Signature String (multisig?)
 ```
