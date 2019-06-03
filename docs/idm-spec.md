@@ -118,6 +118,7 @@ identity.onRevoke(() => {}) : Function (to remove the listener)
 identity.profile.getProperty(String key): Any
 identity.profile.setProperty(String key, Any value): Promise
 identity.profile.unsetProperty(String key): Promise
+identity.profile.setProperties(Object properties): Promise
 identity.profile.getDetails(): Promise<SchemaOrg>
 identity.profile.onChange(() => {}) : Function (to remove the listener)
 ```
