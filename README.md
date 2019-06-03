@@ -48,11 +48,13 @@ The codebase lives in separate GitHub repositories:
 - [`js-crypto-key-composer`](https://github.com/ipfs-shipyard/js-crypto-key-composer) - Module to decompose and compose crypto keys of different types and formats.
 - [`js-human-crypto-keys`](https://github.com/ipfs-shipyard/js-human-crypto-keys) - Module to generate and import human-friendly cryptographic keys using mnemonics or seeds.
 - [`js-idm-wallet`](https://github.com/ipfs-shipyard/js-idm-wallet) - IDM Wallet SDK to be used by JS based wallet applications.
-- [`react-idm-wallet`](https://github.com/ipfs-shipyard/react-idm-wallet) - React bindings for the JS based IDM Wallet SDK
+- [`react-idm-wallet`](https://github.com/ipfs-shipyard/react-idm-wallet) - React bindings for the JS based IDM Wallet SDK.
 - [`js-idm-client`](https://github.com/ipfs-shipyard/js-idm-client) - IDM Client SDK to be used by JS applications that interact with IDM Wallets.
+- [`js-idm-bridge-postmsg`](https://github.com/ipfs-shipyard/js-idm-bridge-postmsg) - The `postMessage` bridge to be used by both IDM Wallets and IDM Clients.
 - [`nomios-web`](https://github.com/ipfs-shipyard/nomios-web) - Reference IDM Wallet application based on Web technologies.
 - [`nomios-web-uikit`](https://github.com/ipfs-shipyard/nomios-web-uikit) - A set of shared React components used by `nomios-web`.
 - [`nomios.io`](https://github.com/ipfs-shipyard/nomios.io) - The [nomios.io](https://nomios.io) website repository.
+- [`workshop-idm-chat-dapp`](https://github.com/ipfs-shipyard/workshop-idm-chat-dapp) - A workshop where we showcase how to integrate IDM into a DApp to provide authentication and signatures.
 
 We will update this list whenever new IDM based repositories are created.
 
