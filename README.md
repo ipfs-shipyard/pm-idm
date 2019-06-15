@@ -51,6 +51,7 @@ The codebase lives in separate GitHub repositories:
 - [`react-idm-wallet`](https://github.com/ipfs-shipyard/react-idm-wallet) - React bindings for the JS based IDM Wallet SDK.
 - [`js-idm-client`](https://github.com/ipfs-shipyard/js-idm-client) - IDM Client SDK to be used by JS applications that interact with IDM Wallets.
 - [`js-idm-bridge-postmsg`](https://github.com/ipfs-shipyard/js-idm-bridge-postmsg) - The `postMessage` bridge to be used by both IDM Wallets and IDM Clients.
+- [`js-idm-signatures`](https://github.com/ipfs-shipyard/js-idm-signatures) - Package to create and validate signatures made with IDM devices and sessions.
 - [`nomios-web`](https://github.com/ipfs-shipyard/nomios-web) - Reference IDM Wallet application based on Web technologies.
 - [`nomios-web-uikit`](https://github.com/ipfs-shipyard/nomios-web-uikit) - A set of shared React components used by `nomios-web`.
 - [`nomios.io`](https://github.com/ipfs-shipyard/nomios.io) - The [nomios.io](https://nomios.io) website repository.
