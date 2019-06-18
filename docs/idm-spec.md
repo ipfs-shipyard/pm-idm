@@ -23,7 +23,7 @@ Index:
 
 // signing and verifying
 .sign(ArrayBuffer|Any data, { SignWith signWith = session, String ?previewUrl } ?options): Promise<IdmSignature>
-.verifySignature(ArrayBuffer|Any data, IdmSignature signature): Promise<{ Boolean ok, Error ?error }>
+.verifySignature(ArrayBuffer|Any data, IdmSignature signature): Promise<{ Boolean valid, Error ?error }>
 ```
 
 
