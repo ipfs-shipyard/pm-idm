@@ -15,8 +15,9 @@ Here is a list of some useful documents. If you're interested in collaborating, 
 ## Team
 
 - [André Cruz](https://github.com/satazor) - Software engineer
-- [André Sousa](https://github.com/andreforsousa) - Designer
+- [André Sousa](https://github.com/andreforsousa) - UI/UX Designer
 - [Cátia Pereira](https://github.com/catiatpereira) - Project Manager
+- [Gil Domingues](https://github.com/DominguesGM) - Software engineer
 - [Paulo Marcos](https://github.com/paulobmarcos) - Software engineer
 - [Pedro Santos](https://github.com/PedroMiguelSS) - Software engineer
 - [Pedro Teixeira](https://github.com/pgte) - Adviser
