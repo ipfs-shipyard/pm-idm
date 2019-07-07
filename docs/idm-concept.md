@@ -118,7 +118,7 @@ The first method is less intrusive and happens transparently to the user, but is
 
 The second method is more secure as the user is prompted to unlock IDM to decrypt the Device Private Key, but it is more intrusive. The interaction is similar to the authentication process, where the user is prompted inside the IDM Wallet to sign. Because the Device Private Key is encrypted, this gives the DID owner plenty of time to revoke that key in another IDM Wallet.
 
-Ultimately, the application may choose between both methods for different situations depending on the security degree they want to have.
+Ultimately, the application may choose between both methods for different situations depending on the degree of security they want to have.
 
 #### Verifying signatures
 
